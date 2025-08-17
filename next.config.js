@@ -5,6 +5,26 @@ const nextConfig = {
   },
   images: {
     domains: ['localhost'],
+    unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  output: 'standalone',
+  poweredByHeader: false,
+  compress: true,
+  generateEtags: false,
+  httpAgentOptions: {
+    keepAlive: true,
   },
 }
 
